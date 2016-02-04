@@ -45,5 +45,8 @@
     "uglify-js": "^2.4.24",
     "watch": "^0.16.0",
     "watchify": "^3.4.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.6"
   }
 }
