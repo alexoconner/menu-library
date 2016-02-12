@@ -12,15 +12,15 @@
     "watch:js": "watchify ./src/index.js -t babelify -o ./dist/index.js -v",
     "build:js": "browserify ./src/index.js -t babelify > ./dist/index.js",
     "make:js": "browserify ./src/index.js -t babelify | uglifyjs > ./dist/index.js",
-    "build:html": "html-minifier ./src/index.html --output ./dist/index.html",
-    "make:html": "html-minifier --collapse-whitespace ./src/index.html --output ./dist/index.html",
+    "build:html": "cp -r ./src/tmpl/*.html ./dist && cp ./src/index.html ./dist",
+    "make:html": "cp -r ./src/tmpl/*.html ./dist && cp ./src/index.html ./dist",
     "watch": "parallelshell 'npm run watch:styles' 'npm run watch:js'",
     "build": "npm run build:html && npm run build:js && npm run build:styles",
     "make": "npm run build:js && npm run make:html && npm run make:styles"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexoconner/node-webapp-generator.git"
+    "url": "git+https://github.com/alexoconner/mobile-menus.git"
   },
   "keywords": [
     "node",
@@ -32,14 +32,13 @@
   "author": "Alexander Skrabl",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alexoconner/node-webapp-generator/issues"
+    "url": "https://github.com/alexoconner/mobile-menus/issues"
   },
-  "homepage": "https://github.com/alexoconner/node-webapp-generator#readme",
+  "homepage": "https://github.com/alexoconner/mobile-menus#readme",
   "devDependencies": {
     "babelify": "^6.3.0",
     "browserify": "^11.1.0",
     "clean-css": "^3.4.3",
-    "html-minifier": "^0.7.2",
     "less": "^2.5.1",
     "parallelshell": "^2.0.0",
     "uglify-js": "^2.4.24",
