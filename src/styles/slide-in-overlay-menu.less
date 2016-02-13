@@ -1,0 +1,50 @@
+a.slide-in-menu--trigger {
+    position: relative;
+    display: inline-block;
+    width: 33px;
+    height: 32px;
+    z-index: 100;
+    margin-top: 12px;
+
+    &:hover {
+        .slide-in-menu--trigger__lines {
+            &:before {
+                top: -10px;
+            }
+
+            &:after {
+                bottom: -10px;
+            }
+        }
+    }
+}
+
+.slide-in-menu--trigger__lines {
+    display: block;
+    position: relative;
+    margin-top: 14px;
+    height: 3px;
+    background-color: #FFFFFF;
+
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: #FFFFFF;
+    }
+
+    &:before {
+        top: -8px;
+        transition: top .3s;
+    }
+
+    &:after {
+        bottom: -8px;
+        transition: bottom .3s;
+    }
+}
+

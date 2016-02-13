@@ -2,4 +2,4 @@
  * Index js file
  */
 
-require ( './scripts/app' );
+import './scripts/menu';
