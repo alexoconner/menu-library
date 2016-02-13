@@ -12,9 +12,10 @@
     "watch:js": "watchify ./src/index.js -t babelify -o ./dist/index.js -v",
     "build:js": "browserify ./src/index.js -t babelify > ./dist/index.js",
     "make:js": "browserify ./src/index.js -t babelify | uglifyjs > ./dist/index.js",
+    "watch:html": "watch 'npm run build:html' ./src/",
     "build:html": "cp -r ./src/tmpl/*.html ./dist && cp ./src/index.html ./dist",
     "make:html": "cp -r ./src/tmpl/*.html ./dist && cp ./src/index.html ./dist",
-    "watch": "parallelshell 'npm run watch:styles' 'npm run watch:js'",
+    "watch": "parallelshell 'npm run watch:styles' 'npm run watch:js' 'npm run watch:html'",
     "build": "npm run build:html && npm run build:js && npm run build:styles",
     "make": "npm run build:js && npm run make:html && npm run make:styles"
   },
