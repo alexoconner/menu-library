@@ -1,7 +1,7 @@
 {
-  "name": "node-webapp-generator",
+  "name": "mobile-menus",
   "version": "0.0.0",
-  "description": "Seed repository for front-end built with node scripting",
+  "description": "Collection of css3 mobile/burger menus",
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,10 +25,13 @@
   },
   "keywords": [
     "node",
-    "generator",
-    "webapp",
+    "css3",
+    "mobile",
+    "burger",
+    "script",
     "npm",
-    "script"
+    "menu",
+    "es6"
   ],
   "author": "Alexander Skrabl",
   "license": "ISC",
