@@ -2,6 +2,9 @@
  * Simple vanilla js to trigger our menus
  */
 
+// classlist polyfill
+import 'classlist-polyfill';
+
 /**
  * @class: MenuTrigger
  * defines our trigger and target and simply add/removes a class
@@ -16,11 +19,14 @@ class MenuTrigger {
     trigger(trigger, target) {
         document.addEventListener("DOMContentLoaded", function(event) {
 
-            var menuTrigger = document.querySelector(trigger);
+            var menuTrigger = document.querySelectorAll(trigger);
+            var menuTarget = document.querySelector(target);
 
-            menuTrigger.onclick = function() {
-                console.log('target is ' + target);
-            };
+            for (var i = 0; i < menuTrigger.length; i++) {
+                menuTrigger[i].onclick = () => {
+                    menuTarget.classList.toggle('open');
+                };
+            }
         });
     }
 }
