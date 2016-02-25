@@ -1,7 +1,7 @@
 {
-  "name": "mobile-menus",
+  "name": "menu-library",
   "version": "0.0.0",
-  "description": "Collection of css3 mobile/burger menus",
+  "description": "Collection of css3/html and js menus",
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexoconner/mobile-menus.git"
+    "url": "git+https://github.com/alexoconner/menu-library.git"
   },
   "keywords": [
     "node",
@@ -36,9 +36,9 @@
   "author": "Alexander Skrabl",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alexoconner/mobile-menus/issues"
+    "url": "https://github.com/alexoconner/menu-library/issues"
   },
-  "homepage": "https://github.com/alexoconner/mobile-menus#readme",
+  "homepage": "https://github.com/alexoconner/menu-library#readme",
   "devDependencies": {
     "babelify": "^6.3.0",
     "browserify": "^11.1.0",
