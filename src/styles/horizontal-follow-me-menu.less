@@ -1,13 +1,36 @@
 
+@horizontal-follow-me-menu--height: 60px;
+
 .horizontal-follow-me-menu {
+    height: @horizontal-follow-me-menu--height;
 }
 
 
 .horizontal-follow-me-menu__main {
     list-style: none;
     margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 .horizontal-follow-me-menu__main__item {
     display: inline-block;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.horizontal-follow-me-menu__main__item__link {
+    display: block;
+    color: #333333;
+    text-decoration: none;
+    transition: color .3s;
+    height: 100%;
+    line-height: @horizontal-follow-me-menu--height;
+    padding: 0 20px;
+    font-weight: bold;
+
+    &:hover {
+        color: #000000;
+        text-decoration: none;
+    }
 }
