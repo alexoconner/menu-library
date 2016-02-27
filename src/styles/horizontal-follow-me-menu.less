@@ -2,9 +2,19 @@
 @horizontal-follow-me-menu--height: 60px;
 
 .horizontal-follow-me-menu {
+    position: relative;
     height: @horizontal-follow-me-menu--height;
 }
 
+.horizontal-follow-me-menu__line {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100px;
+    background-color: #999999;
+}
 
 .horizontal-follow-me-menu__main {
     list-style: none;
