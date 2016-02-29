@@ -9,9 +9,9 @@
     "watch:styles": "watch 'npm run build:styles' ./src/styles",
     "build:styles": "lessc ./src/styles/styles.less ./dist/styles.css",
     "make:styles": "lessc ./src/styles/styles.less | cleancss > ./dist/styles.css",
-    "watch:js": "watchify ./src/index.js -t babelify --debug -o ./dist/index.js -v",
-    "build:js": "browserify ./src/index.js -t babelify --debug > ./dist/index.js",
-    "make:js": "browserify ./src/index.js -t babelify | uglifyjs > ./dist/index.js",
+    "watch:js": "bundler ./src/scripts --watch 'src/scripts/**/*.js*' -t babelify --debug -o ./dist",
+    "build:js": "bundler ./src/scripts -t babelify --debug -o ./dist",
+    "make:js": "bundler ./src/scripts -t babelify --debug -o ./dist",
     "watch:html": "watch 'npm run build:html' ./src/",
     "build:html": "cp -r ./src/tmpl/*.html ./dist && cp ./src/index.html ./dist",
     "make:html": "cp -r ./src/tmpl/*.html ./dist && cp ./src/index.html ./dist",
@@ -42,13 +42,12 @@
   "devDependencies": {
     "babelify": "^6.3.0",
     "browserify": "^11.1.0",
+    "classlist-polyfill": "^1.0.2",
     "clean-css": "^3.4.3",
+    "common-bundler": "^0.3.0",
     "less": "^2.5.1",
     "parallelshell": "^2.0.0",
-    "uglify-js": "^2.4.24",
-    "watch": "^0.16.0",
-    "watchify": "^3.4.0",
-    "classlist-polyfill": "^1.0.2"
+    "watch": "^0.16.0"
   },
   "dependencies": {
     "bootstrap": "^3.3.6"
