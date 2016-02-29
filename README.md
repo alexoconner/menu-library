@@ -1,4 +1,4 @@
-### Simple collection of css3 menus with vanilla js
+# Simple collection of css3 menus with vanilla js
 
 ## Install
 * clone repository
