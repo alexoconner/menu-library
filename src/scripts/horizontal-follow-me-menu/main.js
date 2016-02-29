@@ -46,3 +46,5 @@ export default function horizontalFollowMeMenu(movingLine, menuItem, menuWrapper
 
     });
 }
+
+horizontalFollowMeMenu('.horizontal-follow-me-menu__line', '.horizontal-follow-me-menu__main__item', '.horizontal-follow-me-menu');
